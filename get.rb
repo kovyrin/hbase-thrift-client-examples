@@ -17,7 +17,7 @@ client = Apache::Hadoop::Hbase::Thrift::Hbase::Client.new(protocol)
 
 #--------------------------------------------------------------------------------
 # Get a row from hbase
-rows = client.getRowWithColumns('table_name', '123', []) # Get all columns for row_id='1'
+rows = client.getRowWithColumns('table_name', '123', []) # Get all columns for row_id='123'
 if rows && rows.any?
   puts "ROW_ID='123', DATA=#{rows.first.columns.inspect}"
 else
